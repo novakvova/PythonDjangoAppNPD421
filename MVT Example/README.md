@@ -29,6 +29,12 @@ py manage.py startapp users
 deactivate
 ```
 
+## Install Postgres
+```
+pip install psycopg2-binary
+py manage.py migrate
+```
+
 ## Clone Project
 ```
 .venv\Scripts\activate.bat
