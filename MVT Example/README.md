@@ -41,8 +41,8 @@ py manage.py migrate
 pip freeze
 pip freeze > requirements.txt
 
-git clone https://github.com/novakvova/DjangoPython_P22
-cd DjangoPython_P22
+git clone https://github.com/novakvova/PythonDjangoAppNPD421.git
+cd PythonDjangoAppNPD421
 cd 1.SimpleMVT
 py -m venv .venv
 .venv\Scripts\activate.bat
