@@ -158,3 +158,14 @@ SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_REQUEST': True,
     # OTHER SETTINGS
 }
+
+FRONTEND_URL='http://localhost:5173'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.ukr.net'
+EMAIL_PORT = 2525 
+EMAIL_USE_SSL = True 
+EMAIL_HOST_USER = 'super.novakvova@ukr.net'
+EMAIL_HOST_PASSWORD = 'PdjZ074ufMqpy1MJ'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
