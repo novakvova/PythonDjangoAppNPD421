@@ -2,6 +2,7 @@ import {Button, Form, Input, Upload} from "antd";
 import { InboxOutlined } from '@ant-design/icons';
 import type {IRegisterUser} from "../types/account/IRegisterUser.ts";
 import axios from "axios";
+import {APP_ENV} from "../env";
 
 const RegisterPage = () => {
     const [form] = Form.useForm<IRegisterUser>();
@@ -12,7 +13,7 @@ const RegisterPage = () => {
             values.image = values.image[0].originFileObj!;
             // console.log("Is array", values.image[0]);
         }
-        axios.post("http://localhost:4099/api/users/register/", values,
+        axios.post(`${APP_ENV}/api/users/register/`, values,
             {
                 headers: {'Content-Type': 'multipart/form-data'}
             })
