@@ -13,7 +13,7 @@ const RegisterPage = () => {
             values.image = values.image[0].originFileObj!;
             // console.log("Is array", values.image[0]);
         }
-        axios.post(`${APP_ENV}/api/users/register/`, values,
+        axios.post(`${APP_ENV.SERVER_URL}/api/users/register/`, values,
             {
                 headers: {'Content-Type': 'multipart/form-data'}
             })
