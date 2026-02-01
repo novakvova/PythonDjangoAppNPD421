@@ -34,3 +34,9 @@ docker build -t django "./Django API/atbapi"
 # Білдимо локально. Закидаємо образи на docker hub
 # Буде працювати команад docker compose pull
 # Піднімає образи за допомгою docker compose up -d
+
+# Domain info
+```
+63.177.248.142 - minus.itstep.click
+63.177.248.142 - plus.itstep.click
+```

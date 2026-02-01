@@ -13,27 +13,29 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   server:
-    build: ./Django API/atbapi
+    #build: ./Django API/atbapi
+    image: novakvova/atbapi:latest
     container_name: django
     env_file:
       - .env
     volumes:
       - image_data:/app/images
     ports:
-      - "8000:8000"
+      - "8361:8000"
     depends_on:
       - db
 
   front:
-    build: 
-      context: ./vite-django
-      args:
-        VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+    #build: 
+    #  context: ./vite-django
+    #  args:
+    #    VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+    image: novakvova/vite-django:latest
     container_name: front
     depends_on:
       - server
     ports:
-      - "3000:80"
+      - "3571:80"
 
 volumes:
   postgres_data:
