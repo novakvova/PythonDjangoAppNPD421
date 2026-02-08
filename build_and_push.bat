@@ -2,7 +2,7 @@
 
 REM ==== WEB ====
 cd vite-django
-docker build -t vite-django --build-arg VITE_API_BASE_URL=http://63.177.248.142:8361 .
+docker build -t vite-django --build-arg VITE_API_BASE_URL=https://apidjango.itstep.click .
 docker tag vite-django:latest novakvova/vite-django:latest
 docker push novakvova/vite-django:latest
 
